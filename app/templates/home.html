@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<div class="jumbotron">
+  {% if user.is_authenticated %}
+    <div class="row>"><img class="thumbnail center-block" src="{{user.get_avatar_thumb}}"/></div>
+    <p class="center">Welcome, {{user.display_name}}</p>
+  {% else %}
+    <h1>Jumbotron heading</h1>
+    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="{% url 'social:begin' 'facebook' %}" role="button"><i class="fa fa-facebook-square"></i> Login with facebook</a>
+    </p>
+  {% endif %}
+</div>
+<div class="row">
+{% for user in users %}
+  <div class="col-xs-3">
+    <a href="{{user.get_absolute_url}}" class="thumbnail">
+      <img src="{{user.get_avatar_thumb}}" alt="user.display_name">
+    </a>
+  </div>
+{% if forloop.counter|divisibleby:4 %}
+</div>
+<div class="row">
+{% endif %}
+{% endfor %}
+</div>
+{% endblock %}

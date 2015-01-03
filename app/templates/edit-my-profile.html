@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load bootstrap %}
+{% block title %}Edit Profile{% endblock title %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-12 ">
+    <form class="well clearfix" action="" method="post">{% csrf_token %}
+      {{ form|bootstrap }}
+      <button class="btn btn-success pull-right" type="submit">Update</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

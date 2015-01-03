@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block title %}My Profile{% endblock title %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-5">
+    <a href="" class="thumbnail" >
+      <img src="{{object.get_avatar}}" alt="object.display_name">
+    </a>
+  </div>
+  <div class="col-lg-7">
+    <h1 style="margin-top: 0">{{object.display_name.title}}</h1>
+    <p>{{object.about}}</p>
+    <p class="text-muted">
+      <i class="fa fa-map-marker"></i> {{object.address}} <br />
+      <i class="fa fa-phone"></i> {{object.phone}}<br />
+      <i class="fa fa-envelope"></i> {{object.email}}
+    </p>
+    <a class="btn btn-success" href="{% url 'edit-my-profile' %}">Edit profile</a>
+  </div>
+</div>
+{% endblock %}
