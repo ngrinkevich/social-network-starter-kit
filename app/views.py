@@ -5,7 +5,6 @@ from django.core.urlresolvers import reverse
 from django.contrib.messages.views import SuccessMessageMixin
 from braces.views import LoginRequiredMixin
 from models import User
-from forms import EditMyProfileForm
 
 class HomeView(TemplateView):
     template_name = "home.html"
