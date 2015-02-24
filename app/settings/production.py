@@ -27,3 +27,7 @@ MEDIA_URL = 'http://media.example.dev/'
 STATIC_URL = 'http://static.example.dev/'
 
 SITE_NAME = "http://example.dev"
+
+
+# Hosts/domain names that are valid for this site; required if DEBUG is False
+ALLOWED_HOSTS = ['example.dev',]
