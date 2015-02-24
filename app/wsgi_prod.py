@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
 
 import os, site
 
-site.addsitedir('/home/rushhourcrush_env/lib/python2.7/site-packages/')
+site.addsitedir('/home/socialnetworkstarter_env/lib/python2.7/site-packages/')
 os.environ["DJANGO_SETTINGS_MODULE"] = "app.settings.production"
 
 from django.core.wsgi import get_wsgi_application
