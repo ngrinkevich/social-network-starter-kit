@@ -23,7 +23,7 @@ STATIC_ROOT = '/var/www/static.example.dev/'
 MEDIA_ROOT = '/var/www/media.example.dev/'
 
 SITE_URL = 'http://example.dev'
-MEDIA_URL = 'http://example.dev/'
-STATIC_URL = 'http://example.dev/'
+MEDIA_URL = 'http://media.example.dev/'
+STATIC_URL = 'http://static.example.dev/'
 
 SITE_NAME = "http://example.dev"
