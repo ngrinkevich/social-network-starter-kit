@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-import os
+import os.path
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 
 ALLOWED_HOSTS = []
 
@@ -45,10 +46,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
 # User uploaded files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# STATICFILES_DIRS = (
+#     # Put strings here, like "/home/html/static" or "C:/www/django/static".
+#     # Always use forward slashes, even on Windows.
+#     # Don't forget to use absolute paths, not relative paths.
+#     os.path.join(
+#         os.path.dirname(__file__),
+#         'static',
+#     ),
+# )
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
