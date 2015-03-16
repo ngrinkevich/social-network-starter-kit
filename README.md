@@ -30,6 +30,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '********************'
 
 ```
 brew install postgresql
+brew install postgis
 pip install -r requirements.txt
 ```
 - Run migrations
